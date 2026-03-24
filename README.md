@@ -15,8 +15,8 @@ A fully featured project management frontend built with **React 18 + TypeScript 
 
 ```bash
 # 1. Unzip and enter the project
-unzip flowboard.zip
-cd flowboard
+unzip Multi-View=Project-Tracker-main.zip
+cd Multi-View=Project-Tracker-main
 
 # 2. Install dependencies (Vite-based — no peer dep conflicts)
 npm install
@@ -25,23 +25,6 @@ npm install
 npm run dev
 # → Opens at http://localhost:5173
 ```
-
-### Build for Production
-
-```bash
-npm run build    # outputs to dist/
-npm run preview  # serves the production build locally
-```
-
-### Troubleshooting
-
-| Problem                       | Fix                                               |
-| ----------------------------- | ------------------------------------------------- |
-| `npm install` peer dep errors | Use `npm install --legacy-peer-deps`              |
-| Port 5173 in use              | `npm run dev -- --port 3000`                      |
-| Fonts not loading             | Check your internet connection (Google Fonts CDN) |
-
----
 
 ## State Management — Why `useReducer` + Context
 
