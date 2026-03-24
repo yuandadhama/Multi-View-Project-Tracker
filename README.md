@@ -133,6 +133,10 @@ The custom ghost is rendered via a `position: fixed` div in `KanbanView` — it'
 
 ---
 
+## Lighthouse Report
+
+<img src="src/LightHouse.png" alt="LightHouse Screenshot Performance" width="500"/>
+
 ## Explanation (Submission Field)
 
 **Hardest UI problem:** The drag-and-drop ghost card was the most difficult piece. The browser's native drag ghost is a static screenshot that can't be styled — so I suppressed it entirely using `setDragImage(emptyImg, 0, 0)` and built a custom ghost: a `position: fixed` clone of the card rendered in `KanbanView`, positioned via a `mousemove` listener that tracks `clientX/Y` offset from the grab point. Getting the pickup offset right (so the card doesn't snap to the cursor's top-left corner) required capturing the grab coordinates relative to the card's bounding rect at `dragstart`.
