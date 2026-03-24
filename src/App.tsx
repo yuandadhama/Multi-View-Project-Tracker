@@ -7,7 +7,6 @@ import { KanbanView } from "./components/kanban/KanbanView";
 import { ListView } from "./components/list/ListView";
 import { TimelineView } from "./components/timeline/TimelineView";
 import type { Filters, ViewType } from "./types";
-import { EMPTY_FILTERS } from "./utils";
 
 function App() {
   const { state, dispatch, filteredTasks } = useAppStore();

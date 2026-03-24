@@ -23,7 +23,6 @@ export function TopBar({
   totalTasks,
   filteredCount,
 }: TopBarProps) {
-  const activeUserIds = [...new Set(Object.values(presence))];
   const activeUsers = USERS.filter((u) => Object.keys(presence).includes(u.id));
 
   return (
