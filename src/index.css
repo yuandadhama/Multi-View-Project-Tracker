@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    background-color: #0c0d0f;
+    color: #e8eaed;
+    font-family: "DM Sans", sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #363a40;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4a5260;
+  }
+
+  /* Date input calendar icon color */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.6);
+    cursor: pointer;
+  }
+
+  select option {
+    background: #1c1e22;
+    color: #e8eaed;
+  }
+}
+
+@theme {
+  /* Fonts */
+  --font-display: "Syne", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --font-body: "DM Sans", sans-serif;
+
+  /* Colors */
+  --color-bg: #0c0d0f;
+
+  --color-surface: #141618;
+  --color-surface-2: #1c1e22;
+  --color-surface-3: #242729;
+
+  --color-border: #2a2d32;
+  --color-border-2: #363a40;
+
+  --color-ink: #e8eaed;
+  --color-ink-2: #9aa0ad;
+  --color-ink-3: #636b78;
+
+  --color-accent: #6ee7b7;
+  --color-accent-2: #34d399;
+
+  --color-prio-critical: #ef4444;
+  --color-prio-high: #f97316;
+  --color-prio-medium: #eab308;
+  --color-prio-low: #22c55e;
+
+  --color-col-todo: #6366f1;
+  --color-col-progress: #f59e0b;
+  --color-col-review: #8b5cf6;
+  --color-col-done: #10b981;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes avatarPop {
+  0% {
+    transform: scale(0) rotate(-10deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes snapBack {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
